@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veo_Grok — Tool Auto Tạo Video AI Chuyên Nghiệp</title>
+  <meta name="description" content="Tạo video AI đồng nhất nhân vật chỉ từ vài dòng mô tả. Tự động hoàn toàn — nhanh, gọn, chuyên nghiệp.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="space"></canvas>
+<div class="bg-gradient"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <a href="#" class="brand">
+    <span class="brand-icon">⚡</span>
+    <span>Veo<span style="color:var(--primary)">_</span>Grok</span>
+  </a>
+  <nav class="nav">
+    <a href="#features">Tính năng</a>
+    <a href="#how-it-works">Cách hoạt động</a>
+    <a href="#pricing">Bảng giá</a>
+    <a href="#demo">Video demo</a>
+    <a href="https://zalo.me/0347854097" target="_blank" class="nav-cta">💬 Mua ngay</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Phiên bản V2.3.7 — Cập nhật mới nhất
+      </div>
+
+      <h1 class="hero-headline reveal reveal-delay-1">
+        Tool Auto Tạo Video<br>
+        <span class="gradient-text">Đồng Nhất Nhân Vật</span><br>
+        Chỉ Từ Vài Dòng Mô Tả
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        Hệ thống tự động phân tích kịch bản, dựng video hoàn chỉnh và kể chuyện có kết cấu. Từ prompt nhỏ tạo ra video chất lượng cao.
+      </p>
+
+      <p class="hero-sub reveal reveal-delay-3">
+        <span class="hero-sub-highlight">Nhanh — Gọn — Tự động 100%.</span>
+      </p>
+
+      <div class="hero-actions reveal reveal-delay-4">
+        <a href="https://github.com/hieudtpd07783-cmd/veo_grok_landing/releases/download/Veo3_Grok_V2.3.7/Auto_Veo3_Grok_HieuMMO_V2.3.7_Setup.exe" target="_blank" rel="noopener" class="btn btn-primary">
+          <span class="btn-icon">⬇</span>
+          Tải cho Windows
+        </a>
+        <a href="#demo" class="btn btn-secondary">
+          ▶ Xem video demo
+        </a>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-5">
+        <div class="stat">
+          <span class="stat-value"><span class="accent count-up" data-target="2500">0</span><span style="font-size:18px">+</span></span>
+          <span class="stat-label">Người dùng</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span class="pink count-up" data-target="15000">0</span><span style="font-size:18px">+</span></span>
+          <span class="stat-label">Video đã tạo</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span class="accent count-up" data-target="98">0</span><span style="font-size:18px">%</span></span>
+          <span class="stat-label">Hài lòng</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tool Preview (Right) -->
+    <div class="hero-right reveal-scale">
+      <div class="hero-visual">
+        <div class="floating-badge badge-1">
+          <span class="badge-icon">🎯</span> Đồng nhất 100%
+        </div>
+        <div class="floating-badge badge-2">
+          <span class="badge-icon">🚀</span> Auto tạo video
+        </div>
+        <div class="floating-badge badge-3">
+          <span class="badge-icon">⚡</span> Nhanh hơn 10x
+        </div>
+
+        <div class="tool-window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+            </div>
+            <span class="window-title">Veo_Grok V2.3.7 — HIEUADMIN</span>
+          </div>
+
+          <div class="window-toolbar">
+            <span class="window-toolbar-title">⚡ VEO GROK <span>V2.3.7</span></span>
+            <div class="window-controls">
+              <button class="win-btn">🌙 Tối</button>
+              <button class="win-btn active">VN</button>
+              <a href="https://zalo.me/0347854097" target="_blank" class="win-zalo" style="text-decoration:none;">💬 Zalo</a>
+            </div>
+          </div>
+
+          <div class="window-tabs">
+            <div class="win-tab">VEO 3</div>
+            <div class="win-tab">GROK</div>
+            <div class="win-tab active">Text to Video</div>
+            <div class="win-tab">Image to Video</div>
+            <div class="win-tab">Ý tưởng → Video</div>
+            <div class="win-tab">Video Đồng Nhất</div>
+          </div>
+
+          <div class="window-body">
+            <!-- LEFT PANEL -->
+            <div class="window-panel">
+              <div class="panel-header">
+                <span class="panel-title">Clone video</span>
+                <button class="panel-btn">Cấu hình</button>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Viết prompt bằng</label>
+                  <select>
+                    <option selected>Gemini Browser</option>
+                    <option>Claude Browser</option>
+                    <option>ChatGPT Browser</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label>Thể loại video</label>
+                  <select>
+                    <option selected>Dialogue</option>
+                    <option>Action</option>
+                    <option>Narration</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Phong cách</label>
+                  <select>
+                    <option selected>3D Pixar</option>
+                    <option>Anime</option>
+                    <option>Cinematic</option>
+                    <option>Realistic</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label>Số cảnh</label>
+                  <div class="stepper">
+                    <button class="stepper-btn">−</button>
+                    <span class="stepper-val">10</span>
+                    <button class="stepper-btn">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label>Ngôn ngữ thoại</label>
+                  <select>
+                    <option selected>Tiếng Việt</option>
+                    <option>English</option>
+                    <option>日本語</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label>Gemini tabs</label>
+                  <div class="stepper">
+                    <button class="stepper-btn">−</button>
+                    <span class="stepper-val">4</span>
+                    <button class="stepper-btn">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="toggle-row">
+                <span class="toggle-label">Ambience & FX</span>
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-label">Background Music</span>
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+              <div class="toggle-row">
+                <span class="toggle-label">Fixed Camera</span>
+                <label class="toggle">
+                  <input type="checkbox">
+                  <span class="toggle-track"></span>
+                  <span class="toggle-thumb"></span>
+                </label>
+              </div>
+
+              <div class="summary-bar">⚡ Tổng ~<strong>80s</strong> (<strong>10</strong> cảnh × <strong>8s</strong>)</div>
+
+              <div class="window-source">
+                <div class="source-label">Video nguồn:</div>
+                <div class="source-input-row">
+                  <input type="text" value="Ở Những Môi Trường Khắc Nghiệt...">
+                  <button>Chọn file</button>
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="action-btn">🚀 VEO3 — Clone video</button>
+                <button class="action-btn">■ Dừng</button>
+                <button class="action-btn">▶ Xem video/Ảnh</button>
+                <button class="action-btn">🌐 Proxy</button>
+              </div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <div class="window-panel">
+              <div class="status-row">
+                <div class="status-item done"><span class="dot"></span> Hoàn thành(10)</div>
+                <div class="status-item running"><span class="dot"></span> Đang tạo(0)</div>
+                <div class="status-item wait"><span class="dot"></span> Đang chờ(0)</div>
+                <div class="status-item error"><span class="dot"></span> Lỗi(0)</div>
+                <button class="status-guide">📖 Hướng dẫn</button>
+              </div>
+
+              <div class="status-table-win">
+                <div class="table-head">
+                  <span>STT</span>
+                  <span>XEM TRƯỚC</span>
+                  <span>TRẠNG THÁI</span>
+                  <span>CHẾ ĐỘ</span>
+                </div>
+                <div class="table-row">
+                  <span class="table-num">001</span>
+                  <img class="table-thumb" src="https://picsum.photos/seed/veo1/144/88" alt="video thumb">
+                  <span class="table-status">Hoàn thành</span>
+                  <span class="table-mode">VEO3 — Tạo video từ Ảnh</span>
+                </div>
+                <div class="table-row">
+                  <span class="table-num">002</span>
+                  <img class="table-thumb" src="https://picsum.photos/seed/veo2/144/88" alt="video thumb">
+                  <span class="table-status">Hoàn thành</span>
+                  <span class="table-mode">VEO3 — Tạo video từ Ảnh</span>
+                </div>
+                <div class="table-row">
+                  <span class="table-num">003</span>
+                  <img class="table-thumb" src="https://picsum.photos/seed/veo3/144/88" alt="video thumb">
+                  <span class="table-status">Hoàn thành</span>
+                  <span class="table-mode">VEO3 — Tạo video từ Ảnh</span>
+                </div>
+              </div>
+
+              <div class="account-bar">
+                <span>👤 <strong>HIEUADMIN</strong></span>
+                <span>🎫 Veo3_Grok</span>
+                <span class="expire">📅 Hết hạn: 23/05/2027</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar reveal">
+    <div class="trust-item">
+      <span class="icon">🔒</span>
+      <span><span class="highlight">Mã hóa</span> 256-bit</span>
+    </div>
+    <div class="trust-item">
+      <span class="icon">⏱</span>
+      <span>Hoàn tiền <span class="highlight">7 ngày</span></span>
+    </div>
+    <div class="trust-item">
+      <span class="icon">💬</span>
+      <span>Hỗ trợ <span class="highlight">24/7</span></span>
+    </div>
+    <div class="trust-item">
+      <span class="icon">🔄</span>
+      <span>Cập nhật <span class="highlight">trọn đời</span></span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features-section" id="features">
+    <div class="section-eyebrow reveal">✨ Tính năng</div>
+    <h2 class="section-title reveal reveal-delay-1">Mọi thứ bạn cần để<br>tạo video chuyên nghiệp</h2>
+    <p class="section-subtitle reveal reveal-delay-2">
+      Từ prompt đơn giản đến video hoàn chỉnh — tất cả được tự động hóa trong một công cụ duy nhất.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-num">01</span>
+        <div class="feature-icon-wrap icon-purple">🎭</div>
+        <h3>Đồng Nhất Nhân Vật 100%</h3>
+        <p>Giữ nguyên nhân vật qua mọi cảnh quay — từ ngoại hình, khuôn mặt đến phong cách biểu cảm.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-num">02</span>
+        <div class="feature-icon-wrap icon-cyan">🤖</div>
+        <h3>Tự Động Tạo Kịch Bản</h3>
+        <p>Chỉ cần vài dòng mô tả, hệ thống tự phân tích và viết kịch bản chi tiết cho từng cảnh.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-3">
+        <span class="feature-num">03</span>
+        <div class="feature-icon-wrap icon-pink">🎬</div>
+        <h3>Multi-Style Video</h3>
+        <p>Hỗ trợ 3D Pixar, Anime, Cinematic, Realistic — chuyển đổi phong cách chỉ bằng một click.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-num">04</span>
+        <div class="feature-icon-wrap icon-gold">⚡</div>
+        <h3>Tốc Độ Siêu Nhanh</h3>
+        <p>Tạo video nhanh hơn 10x so với làm thủ công. Quy trình tự động từ đầu đến cuối.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-num">05</span>
+        <div class="feature-icon-wrap icon-green">🎵</div>
+        <h3>Nhạc Nền & Ambience Tự Động</h3>
+        <p>Thêm nhạc nền, hiệu ứng âm thanh môi trường hoàn toàn tự động, đồng bộ với từng cảnh.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-3">
+        <span class="feature-num">06</span>
+        <div class="feature-icon-wrap icon-blue">🌐</div>
+        <h3>Đa Ngôn Ngữ Thoại</h3>
+        <p>Hỗ trợ Tiếng Việt, English, Nhật, Trung — chuyển đổi ngôn ngữ chỉ bằng một lựa chọn.</p>
+      </div>
+    </div>
+
+    <div class="features-row">
+      <div class="feature-mini reveal reveal-delay-1">
+        <span class="feature-mini-icon">📊</span>
+        <div>
+          <h4>Quản Lý Dự Án</h4>
+          <p>Tổ chức video theo dự án riêng, lưu trữ có hệ thống.</p>
+        </div>
+      </div>
+      <div class="feature-mini reveal reveal-delay-2">
+        <span class="feature-mini-icon">🔄</span>
+        <div>
+          <h4>Tái Tạo Video Lỗi</h4>
+          <p>Tự động phát hiện và tạo lại video lỗi chỉ với 1 click.</p>
+        </div>
+      </div>
+      <div class="feature-mini reveal reveal-delay-3">
+        <span class="feature-mini-icon">🖼</span>
+        <div>
+          <h4>Text → Ảnh → Video</h4>
+          <p>Chuyển đổi từ ý tưởng sang ảnh rồi thành video hoàn chỉnh.</p>
+        </div>
+      </div>
+      <div class="feature-mini reveal reveal-delay-4">
+        <span class="feature-mini-icon">📐</span>
+        <div>
+          <h4>Đa Tỷ Lệ Khung Hình</h4>
+          <p>16:9, 9:16, 1:1 — xuất video phù hợp mọi nền tảng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-eyebrow reveal">🚀 3 bước đơn giản</div>
+    <h2 class="section-title reveal reveal-delay-1">Tạo video chuyên nghiệp<br>trong vài phút</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Không cần kỹ năng edit. Không cần phần mềm phức tạp. Chỉ cần ý tưởng.</p>
+
+    <div class="steps-grid">
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-num">1</div>
+        <div class="step-icon">✍️</div>
+        <h3>Viết Prompt</h3>
+        <p>Nhập vài dòng mô tả nội dung video mong muốn — nhân vật, cảnh, hành động.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-num">2</div>
+        <div class="step-icon">🤖</div>
+        <h3>AI Xử Lý Tự Động</h3>
+        <p>Hệ thống tự phân tích, viết kịch bản, tạo ảnh, ghép video và thêm âm thanh.</p>
+        <div class="step-connector"></div>
+      </div>
+
+      <div class="step-card reveal reveal-delay-3">
+        <div class="step-num">3</div>
+        <div class="step-icon">🎉</div>
+        <h3>Tải Video Hoàn Chỉnh</h3>
+        <p>Nhận video chất lượng cao, đồng nhất nhân vật, sẵn sàng xuất bản.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEMO VIDEO ===== -->
+  <section class="demo-section" id="demo">
+    <div class="section-eyebrow reveal">🎬 Video demo</div>
+    <h2 class="section-title reveal reveal-delay-1">Xem Veo_Grok<br>hoạt động thực tế</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Quy trình tạo video từ ý tưởng đến sản phẩm hoàn chỉnh trong vài phút.</p>
+
+    <div class="video-wrapper reveal reveal-delay-3">
+      <div class="video-glow"></div>
+      <a href="https://youtu.be/n8ksQ39FLVk" target="_blank" class="video-thumb-link">
+        <img
+          src="https://img.youtube.com/vi/n8ksQ39FLVk/maxresdefault.jpg"
+          alt="Video demo Veo_Grok"
+          class="video-thumb-img"
+          onerror="this.src='https://img.youtube.com/vi/n8ksQ39FLVk/sddefault.jpg'"
+        >
+        <div class="video-thumb-overlay">
+          <div class="play-btn-large">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <div class="video-thumb-label">
+            <span class="video-thumb-title">Hướng dẫn sử dụng Veo_Grok V2.3.7</span>
+            <span class="video-thumb-sub">Xem full hướng dẫn chi tiết trên YouTube →</span>
+          </div>
+        </div>
+        <div class="video-duration-badge">▶  Video</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-eyebrow reveal">💰 Bảng giá</div>
+    <h2 class="section-title reveal reveal-delay-1">Chọn gói phù hợp<br>với bạn</h2>
+    <p class="section-subtitle reveal reveal-delay-2">Giá cả hợp lý — không phí ẩn. Cập nhật trọn đời.</p>
+
+    <div class="pricing-wrapper">
+      <div class="pricing-grid">
+        <div class="price-card reveal reveal-delay-1">
+          <h3>Starter</h3>
+          <div class="price-amount">
+            <span class="price-currency">₫</span>
+            <span class="price-value">349K</span>
+          </div>
+          <p class="price-unit">/ 1 tháng</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Tạo video đồng nhất</li>
+            <li><span class="check">✓</span> Gemini Browser</li>
+            <li><span class="check">✓</span> 3D Pixar / Anime / Cinematic</li>
+            <li><span class="check">✓</span> Nhạc nền tự động</li>
+            <li><span class="check">✓</span> Hỗ trợ qua Zalo</li>
+          </ul>
+          <a href="https://zalo.me/0347854097" target="_blank" class="price-cta primary">Mua ngay</a>
+        </div>
+
+        <div class="price-card featured reveal reveal-delay-2">
+          <span class="price-badge hot">Tiết kiệm</span>
+          <h3>6 Tháng</h3>
+          <div class="price-amount">
+            <span class="price-currency">₫</span>
+            <span class="price-value">999K</span>
+          </div>
+          <p class="price-unit">/ 6 tháng</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Tất cả tính năng Starter</li>
+            <li><span class="check">✓</span> Multi Gemini tabs</li>
+            <li><span class="check">✓</span> Tất cả phong cách video</li>
+            <li><span class="check">✓</span> Đa ngôn ngữ thoại</li>
+            <li><span class="check">✓</span> Proxy tự động</li>
+            <li><span class="check">✓</span> Ưu tiên xử lý</li>
+          </ul>
+          <a href="https://zalo.me/0347854097" target="_blank" class="price-cta cyan">Mua ngay</a>
+        </div>
+
+        <div class="price-card reveal reveal-delay-3">
+          <span class="price-badge hot">Phổ biến</span>
+          <h3>1 Năm</h3>
+          <div class="price-amount">
+            <span class="price-currency">₫</span>
+            <span class="price-value">1.499K</span>
+          </div>
+          <p class="price-unit">/ 12 tháng</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Tất cả tính năng 6 tháng</li>
+            <li><span class="check">✓</span> Model VEO 3.1 nhanh nhất</li>
+            <li><span class="check">✓</span> Không giới hạn video</li>
+            <li><span class="check">✓</span> Tài khoản cao cấp</li>
+            <li><span class="check">✓</span> Hỗ trợ ưu tiên</li>
+          </ul>
+          <a href="https://zalo.me/0347854097" target="_blank" class="price-cta cyan">Mua ngay</a>
+        </div>
+
+        <div class="price-card best reveal reveal-delay-3">
+          <span class="price-badge best">⭐ Vĩnh viễn</span>
+          <h3>VIP</h3>
+          <div class="price-amount">
+            <span class="price-currency">₫</span>
+            <span class="price-value">2.499K</span>
+          </div>
+          <p class="price-unit">/ vĩnh viễn</p>
+          <ul class="price-features">
+            <li><span class="check">✓</span> Tất cả tính năng</li>
+            <li><span class="check">✓</span> Không giới hạn video</li>
+            <li><span class="check">✓</span> Model VEO 3.1 nhanh nhất</li>
+            <li><span class="check">✓</span> Tài khoản VIP cao cấp</li>
+            <li><span class="check">✓</span> Hỗ trợ 24/7 ưu tiên</li>
+            <li><span class="check">✓</span> Cập nhật trọn đời</li>
+          </ul>
+          <a href="https://zalo.me/0347854097" target="_blank" class="price-cta pink">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="cta-glow"></div>
+    <div class="section-eyebrow reveal">⚡ Bắt đầu ngay hôm nay</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Sẵn sàng tạo video<br>
+      <span class="gradient-text">chuyên nghiệp đầu tiên?</span>
+    </h2>
+    <p class="hero-sub reveal reveal-delay-2" style="max-width:500px; margin:0 auto 8px; text-align:center;">
+      Tham gia cộng đồng 2.500+ người dùng đang tạo video AI mỗi ngày.
+    </p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="https://zalo.me/0347854097" target="_blank" class="btn btn-primary" style="font-size:17px; padding:18px 40px;">
+        💬 Liên hệ Zalo mua ngay
+      </a>
+      <a href="https://t.me/dth5324" target="_blank" class="btn btn-secondary" style="font-size:15px; padding:18px 30px;">
+        ✈️ Telegram @dth5324
+      </a>
+    </div>
+    <div class="contact-chips reveal reveal-delay-4">
+      <a href="https://zalo.me/0347854097" target="_blank" class="contact-chip">
+        <span class="chip-icon">💬</span> Zalo: 034 785 4097
+      </a>
+      <a href="https://t.me/dth5324" target="_blank" class="contact-chip">
+        <span class="chip-icon">✈️</span> Telegram: @dth5324
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="brand">
+        <span class="brand-icon">⚡</span>
+        <span>Veo<span style="color:var(--primary)">_</span>Grok</span>
+      </a>
+      <p>Tool auto tạo video AI chuyên nghiệp. Đồng nhất nhân vật — tự động hoàn toàn.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">💬</a>
+        <a href="#" class="social-btn">📺</a>
+        <a href="#" class="social-btn">📘</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Sản phẩm</h4>
+      <a href="#">Tính năng</a>
+      <a href="#">Bảng giá</a>
+      <a href="#">Video demo</a>
+      <a href="#">Hướng dẫn</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hỗ trợ</h4>
+      <a href="#">Cài đặt</a>
+      <a href="#">FAQ</a>
+      <a href="#">Nhóm Zalo</a>
+      <a href="#">Liên hệ</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Pháp lý</h4>
+      <a href="#">Điều khoản sử dụng</a>
+      <a href="#">Chính sách bảo mật</a>
+      <a href="#">Chính sách hoàn tiền</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Cộng đồng</h4>
+      <a href="#">Blog</a>
+      <a href="#">Case study</a>
+      <a href="#">Đánh giá</a>
+      <a href="#">Affiliate</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Veo_Grok. All rights reserved.</p>
+    <p style="margin-top:8px; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="https://zalo.me/0347854097" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:13px; font-weight:600;">💬 Zalo: 034 785 4097</a>
+      <span style="color:var(--border);">|</span>
+      <a href="https://t.me/dth5324" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:13px; font-weight:600;">✈️ Telegram: @dth5324</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+<script>
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// Scroll top button
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 600);
+}, { passive: true });
+
+// Counter animation
+const counters = document.querySelectorAll('.count-up');
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString('vi-VN');
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObs.observe(c));
+</script>
+</body>
+</html>
