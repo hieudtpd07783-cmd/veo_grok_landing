@@ -112,3 +112,55 @@ window.addEventListener('scroll', () => {
     }
   });
 }, { passive: true });
+
+// ===== CONTACT FORM SUBMISSION =====
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // THAY ĐỔI URL DƯỚI ĐÂY BẰNG URL GOOGLE APPS SCRIPT CỦA BẠN
+    const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+    
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
+    const formMessage = document.getElementById('form-message');
+    
+    // Show loading
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'inline-block';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    formMessage.style.display = 'none';
+    formMessage.className = 'form-message';
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Use no-cors to avoid CORS issues with simple Google Apps Script setups
+      });
+      
+      // Because of no-cors, we can't read the exact response, but if fetch didn't throw, it likely succeeded.
+      formMessage.textContent = 'Gửi thông tin thành công! Chúng tôi sẽ liên hệ lại sớm nhất.';
+      formMessage.classList.add('success');
+      formMessage.style.display = 'block';
+      contactForm.reset();
+      
+    } catch (error) {
+      console.error('Error!', error.message);
+      formMessage.textContent = 'Có lỗi xảy ra. Vui lòng thử lại sau hoặc liên hệ trực tiếp Zalo.';
+      formMessage.classList.add('error');
+      formMessage.style.display = 'block';
+    } finally {
+      // Reset button
+      btnText.style.display = 'inline-block';
+      btnLoader.style.display = 'none';
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+    }
+  });
+}

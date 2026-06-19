@@ -554,17 +554,29 @@
       <p class="hero-sub reveal reveal-delay-2" style="max-width:500px; margin:0 auto 8px; text-align:center;">
         Tham gia cộng đồng 2.500+ người dùng đang tạo video AI mỗi ngày.
       </p>
-      <div class="hero-actions reveal reveal-delay-3">
-        <a href="https://zalo.me/0347854097" target="_blank" class="btn btn-primary"
-          style="font-size:17px; padding:18px 40px;">
-          💬 Liên hệ Zalo mua ngay
-        </a>
-        <a href="https://t.me/dth5324" target="_blank" class="btn btn-secondary"
-          style="font-size:15px; padding:18px 30px;">
-          ✈️ Telegram @dth5324
-        </a>
+      <div class="contact-form-wrapper reveal reveal-delay-3">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder="Họ và tên của bạn">
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" required placeholder="Số điện thoại">
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder="Địa chỉ email">
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" placeholder="Lời nhắn của bạn (không bắt buộc)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+            <span class="btn-text">Gửi thông tin tư vấn</span>
+            <span class="btn-loader" style="display: none;">⏳ Đang gửi...</span>
+          </button>
+          <div id="form-message" class="form-message" style="display: none;"></div>
+        </form>
       </div>
-      <div class="contact-chips reveal reveal-delay-4">
+
+      <div class="contact-chips reveal reveal-delay-4" style="margin-top: 32px;">
         <a href="https://zalo.me/0347854097" target="_blank" class="contact-chip">
           <span class="chip-icon">💬</span> Zalo: 034 785 4097
         </a>
