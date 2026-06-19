@@ -120,7 +120,7 @@ if (contactForm) {
     e.preventDefault();
     
     // THAY ĐỔI URL DƯỚI ĐÂY BẰNG URL GOOGLE APPS SCRIPT CỦA BẠN
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxHzgQ9C3keI0AHMwIG54drPsipxoa1lhw28a6c66Y8Qe5kX-AMs7qaUcfaq6Q1E-xDOA/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbySy9xDVQ71E2f9ddCSIKQkr1Bkg60aQf6enX3aXjvIJJhPwTvDFSrtvr_pDvjUuvoQLA/exec";
     
     const submitBtn = document.getElementById('submit-btn');
     const btnText = submitBtn.querySelector('.btn-text');
