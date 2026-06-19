@@ -136,11 +136,15 @@ if (contactForm) {
     formMessage.className = 'form-message';
     
     const formData = new FormData(contactForm);
+    const data = new URLSearchParams();
+    for (const pair of formData) {
+      data.append(pair[0], pair[1]);
+    }
     
     try {
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
-        body: formData,
+        body: data,
         mode: 'no-cors' // Use no-cors to avoid CORS issues with simple Google Apps Script setups
       });
       
